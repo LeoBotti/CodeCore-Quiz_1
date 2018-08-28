@@ -1,13 +1,13 @@
 <%- include("../partials/header") %>
   <div class="cluck-cards">
     <% for (let cluck of clucks) { %>
-      <div class="card mb-4">
+      <div class="card m-4">
         <div class="card-body">
           <h5 class="card-header">
             <img class="card-icon" src="https://static-cdn.jtvnw.net/emoticons/v1/881168/3.0">
             <%= cluck.username %> • <%= cluck.createdAt %>
           </h5>
-          <p class="card-content"><%= cluck.content %></p>
+          <p class="card-content" style="white-space:pre"><%= cluck.content %></p>
           <img class="card-image" src="<%= cluck.imageURL %>">
         </div>
       </div>
