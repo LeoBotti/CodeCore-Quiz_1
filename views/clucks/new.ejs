@@ -1,0 +1,17 @@
+<%- include("../partials/header") %>
+
+<form action="/clucks/new" method="POST">
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea class="form-control" rows="4" name="content" placeholder="Whatchoo cluckin' 'bout?"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="imageURL">Image URL</label>
+    <input type="text" class="form-control" name="imageURL" placeholder="https://tinyurl.com/ya8daomk">
+  </div>
+
+  <button class="btn btn-outline-dark" type="submit">Cluck!</button>
+</form>
+
+<%- include("../partials/footer") %>

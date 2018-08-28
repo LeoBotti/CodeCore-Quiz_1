@@ -1,0 +1,11 @@
+<%- include("./partials/header") %>
+
+<form action="/sign_in" method="POST">
+  <div class="form-group">
+  <label for="username">Username</label>
+  <input type="username" class="form-control" name="username" required placeholder="e.g. Madam Welminster">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include("./partials/footer") %>
