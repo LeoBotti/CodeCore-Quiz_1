@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const knex = require("../db/client");
+const timeago = require("timeago.js");
 
 router.get("/new", (req, res) => {
   res.render("clucks/new");
@@ -26,7 +27,7 @@ router.get("/", (req, res) => {
   knex("clucks")
     .orderBy("createdAt", "desc")
     .then(clucks => {
-      res.render("clucks/index", { clucks });
+      res.render("clucks/index", { clucks, timeago });
     });
 })
 
